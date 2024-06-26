@@ -1,11 +1,11 @@
 [package]
 name = "bevy-fps-ui"
 description = "Fancy FPS counter for Bevy Game Engine"
-version = "0.1.0"
 authors = ["kamii"]
-license-file = "LICENSE"
+version = "0.1.0"
+license = "GPL-3.0"
 readme = "README.md"
-keywords = ["fps", "debug"]
+repository = "https://github.com/kamilkonefke/bevy-fps-ui"
 edition = "2021"
 
 [dependencies]
