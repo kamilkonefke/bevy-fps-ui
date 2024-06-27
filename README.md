@@ -5,7 +5,7 @@ Simple and fancy FPS counter for Bevy Game Engine
 Via terminal:
 `cargo add bevy-fps-ui`
 
-Or add this to your Cargo.toml dependencaies:
+Or add this to your Cargo.toml dependencies:
 `bevy-fps-ui = "0.1.3"`
 
 ### Usage
