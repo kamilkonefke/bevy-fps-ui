@@ -25,9 +25,10 @@ fn main() {
 ### Example
 You can run example with
 `cargo run --example basic`
-also see [`basic example`](examples/basic)
+also see [`basic example`](examples/basic.rs)
 
 ## Compatibility with Bevy
-| `bevy-fps-ui`   | `bevy` |
-| :--             | :--    |
-| `0.1.*`         | `0.13` |
+| `bevy`        | `bevy-fps-ui` |
+| :--           | :--           |
+| `0.14`        | `0.2`         |
+| `0.13`        | `0.1`         |

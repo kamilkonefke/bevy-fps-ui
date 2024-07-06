@@ -3,6 +3,7 @@
 use bevy::diagnostic::DiagnosticsStore;
 use bevy::diagnostic::FrameTimeDiagnosticsPlugin;
 
+use bevy::color::palettes::css::{RED, LIME, YELLOW, WHITE};
 use bevy::prelude::*;
 
 #[derive(Component)]
@@ -20,20 +21,12 @@ impl Plugin for FpsCounterPlugin {
 
 fn setup_ui(mut commands: Commands) {
     commands.spawn(NodeBundle {
-        background_color: Color::rgba(0.0, 0.0, 0.0, 0.6).into(),
+        background_color: Srgba::new(0.0, 0.0, 0.0, 0.6).into(),
+        border_radius: BorderRadius::all(Val::Px(5.0)),
         style: Style {
-            padding: UiRect {
-                top: Val::Px(3.0),
-                bottom: Val::Px(3.0),
-                left: Val::Px(3.0),
-                right: Val::Px(3.0),
-            },
-            margin: UiRect {
-                top: Val::Px(10.0),
-                bottom: Val::Px(3.0),
-                left: Val::Px(10.0),
-                right: Val::Px(3.0),
-            },
+            padding: UiRect::all(Val::Px(3.0)),
+            margin: UiRect::all(Val::Px(5.0)),
+            justify_self: JustifySelf::End,
             ..Default::default()
         },
         ..Default::default()
@@ -69,10 +62,10 @@ fn update_ui(
                 counter.sections[1].value = format!("{value:.0}");
 
                 match value {
-                    0.0..=25.0 => counter.sections[1].style.color = Color::RED,
-                    25.0..=30.0 => counter.sections[1].style.color = Color::YELLOW,
-                    30.0.. => counter.sections[1].style.color = Color::GREEN,
-                    _ => counter.sections[1].style.color = Color::WHITE,
+                    0.0..=25.0 => counter.sections[1].style.color = RED.into(),
+                    25.0..=30.0 => counter.sections[1].style.color = YELLOW.into(),
+                    30.0.. => counter.sections[1].style.color = LIME.into(),
+                    _ => counter.sections[1].style.color = WHITE.into(),
                 }
             }
         }
