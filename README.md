@@ -6,7 +6,7 @@ Via terminal:
 `cargo add bevy-fps-ui`
 
 Or add this to your Cargo.toml dependencies:
-`bevy-fps-ui = "0.1.3"`
+`bevy-fps-ui = "0.3.0"`
 
 ### Usage
 Basically add `FpsCounterPlugin` to your app:
@@ -30,5 +30,6 @@ also see [`basic example`](examples/basic.rs)
 ## Compatibility with Bevy
 | `bevy`        | `bevy-fps-ui` |
 | :--           | :--           |
+| `0.15`        | `0.3`         |
 | `0.14`        | `0.2`         |
 | `0.13`        | `0.1`         |
